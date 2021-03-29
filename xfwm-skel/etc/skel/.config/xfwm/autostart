@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# wmname LG3D &
+
+sxhkd -c $HOME/.config/xfwm/sxhkdrc &
+tint2 -c $HOME/.config/tint2/tray.tint2rc &
+nitrogen --restore &
+picom -b --config $HOME/.config/picom.conf &
+# redshift -c $HOME/.config/redshift.conf &
+urxvtd -q -o -f &
+setxkbmap -layout us,ru -option "grp:alt_shift_toggle,grp_led:scroll" &
+# setxkbmap -layout us,ru -option "grp:win_space_toggle,grp_led:scroll" &
+xfsettingsd &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+gnome-keyring-daemon --start --components=pkcs11,secrets &
+nm-applet &
+xfce4-power-manager &
+dunst &
+unclutter &
+parcellite &
+udiskie -t &
+(sleep 4; $HOME/.config/xfwm/polybar/launch.sh) &

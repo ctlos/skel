@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=frankenwm
+Comment=Fast dynamic tiling window manager based on monsterwm-xcb
+Exec=/usr/bin/frankenwm_run
+Type=Application

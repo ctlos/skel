@@ -1,0 +1,16 @@
+post_install() {
+  cp -rf /etc/skel-xfwm/. /etc/skel
+  rm -rf /etc/skel-xfwm
+  cp -rf /usr/bin-xfwm/. /usr/bin
+  rm -rf /usr/bin-xfwm
+  mv -f /etc/sddm-xfwm.conf /etc/sddm.conf
+
+  USER_NAME=$(cat /etc/passwd | grep "/home" |cut -d: -f1 |head -1)
+  if [ "$USER_NAME" != "liveuser" ]; then
+    sed -i '/^[^#]*User=/s/^/#/' /etc/sddm.conf
+  fi
+}
+
+post_upgrade() {
+  post_install
+}

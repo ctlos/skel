@@ -1,0 +1,24 @@
+# Maintainer: Alex Creio <ctlos@protonmail.com>
+
+srcname=skel
+pkgname=xfce-skel
+pkgdesc='Settings xfce'
+pkgver=1.9.2
+pkgrel=1
+arch=('any')
+url="https://github.com/ctlos/skel"
+license=('GPL')
+makedepends=('git')
+depends=('xfwm4')
+source=("git+$url.git")
+sha256sums=('SKIP')
+install=README.install
+
+package() {
+  cd ${srcdir}/${srcname}/${pkgname}
+  mkdir -p "${pkgdir}/etc/skel"
+  mkdir -p "${pkgdir}/etc/skel-xfce"
+
+  cp -rf etc/skel/. "$pkgdir/etc/skel-xfce"
+  cp -rf etc/sddm.conf "${pkgdir}/etc/sddm-xfce.conf"
+}

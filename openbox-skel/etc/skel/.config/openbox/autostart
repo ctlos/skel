@@ -1,0 +1,26 @@
+#!/usr/bin/sh
+
+nitrogen --restore &
+# sh ~/.config/polybar/launch.sh &
+# tint2 -c ~/.config/tint2/tray.tint2rc &
+tint2 &
+# conky &
+#(sleep 10; ~/.bin/start-conkies.sh) &
+[[ $(command -v thunar) ]] && thunar --daemon &
+picom -b &
+# numlockx &
+setxkbmap -layout us,ru -option "grp:alt_shift_toggle,grp_led:scroll" &
+# setxkbmap -layout us,ru -option "grp:win_space_toggle,grp_led:scroll" &
+alttab -fg "#9baec8" -bg "#161720" -frame "#5a74ca" -t 128x128 -i 128x48 -d 2 -theme Qogir-dark -font "xft:ClearSansMedium:size=9:antialias=false" -pk "Left" -nk "Right" &
+dunst -config $HOME/.config/dunst/dunstrc &
+gnome-keyring-daemon --start --components=pkcs11 &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+#xsettingsd &
+xfce4-power-manager &
+gxkb &
+# (sleep 1; redshift-gtk) &
+parcellite &
+nm-applet &
+volumeicon &
+jgmenu_run start &
+udiskie -t &

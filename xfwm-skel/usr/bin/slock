@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+
+$HOME/.config/bspwm/multilock.sh -l blur

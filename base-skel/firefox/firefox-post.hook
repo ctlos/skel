@@ -1,0 +1,10 @@
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = firefox
+
+[Action]
+Description = Copy Firefox Distribution Settings
+When = PostTransaction
+Exec = /usr/bin/cp -rf /etc/ctlos-firefox.ini /usr/lib/firefox/distribution/distribution.ini

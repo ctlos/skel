@@ -1,0 +1,14 @@
+post_install() {
+  cp -rf /etc/skel-i3/. /etc/skel
+  rm -rf /etc/skel-i3
+  mv -f /etc/sddm-i3.conf /etc/sddm.conf
+
+  USER_NAME=$(cat /etc/passwd | grep "/home" |cut -d: -f1 |head -1)
+  if [ "$USER_NAME" != "liveuser" ]; then
+    sed -i '/^[^#]*User=/s/^/#/' /etc/sddm.conf
+  fi
+}
+
+post_upgrade() {
+  post_install $1
+}

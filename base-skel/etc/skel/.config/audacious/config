@@ -1,0 +1,25 @@
+
+[audgui]
+about_win=707,304,623,180
+filebrowser_win=378,80,672,480
+info_win=399,181,560,398
+
+[qtui]
+column_widths=10,200,234,26,175,175,10,100,29,53,275,275,275,10,275,275
+entry_count_visible=TRUE
+infoarea_visible=FALSE
+menu_visible=FALSE
+player_height=368
+player_width=686
+player_x=256
+player_y=243
+playlist_columns=artist title length
+playlist_headers=FALSE
+statusbar_visible=FALSE
+
+[skins]
+skin=/usr/share/audacious/Skins/Default
+vis_type=1
+
+[skins-layout]
+albumart=0,522,288,192

@@ -1,0 +1,16 @@
+post_install() {
+  cp -rf /etc/skel-frankenwm/. /etc/skel
+  rm -rf /etc/skel-frankenwm
+  cp -rf /usr/bin-frankenwm/. /usr/bin
+  rm -rf /usr/bin-frankenwm
+  mv /etc/sddm-frankenwm.conf /etc/sddm.conf
+
+  USER_NAME=$(cat /etc/passwd | grep "/home" |cut -d: -f1 |head -1)
+  if [ "$USER_NAME" != "liveuser" ]; then
+    sed -i '/^[^#]*User=/s/^/#/' /etc/sddm.conf
+  fi
+}
+
+post_upgrade() {
+  post_install $1
+}

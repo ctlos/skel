@@ -1,0 +1,28 @@
+# Maintainer: Alex Creio <ctlos@protonmail.com>
+
+srcname=skel
+pkgname=base-skel
+pkgdesc='Settings base'
+pkgver=1.0.0
+pkgrel=1
+arch=('any')
+url="https://github.com/ctlos/skel"
+license=('GPL')
+groups=('ctlos')
+makedepends=('git')
+source=("git+$url.git")
+sha256sums=('SKIP')
+
+package() {
+  cd ${srcdir}/${srcname}/${pkgname}
+  install -d $pkgdir/etc
+  cp -rf etc/. $pkgdir/etc
+
+  # install -d $pkgdir/usr/lib/firefox/browser/defaults/preferences
+  # mkdir -p $pkgdir/usr/lib/firefox/browser/defaults/preferences
+  # install -Dm644 firefox/distribution.ini $pkgdir/etc/ctlos-firefox.ini
+  # install -Dm644 firefox/all-companyname.js $pkgdir/usr/lib/firefox/browser/defaults/preferences/all-companyname.js
+
+  # install -Dm644 firefox/firefox-pre.hook $pkgdir/etc/pacman.d/hooks/firefox-pre.hook
+  # install -Dm644 firefox/firefox-post.hook $pkgdir/etc/pacman.d/hooks/firefox-post.hook
+}

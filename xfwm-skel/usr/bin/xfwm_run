@@ -1,0 +1,4 @@
+#!/bin/bash
+
+$HOME/.config/xfwm/autostart &
+/usr/bin/xfwm4

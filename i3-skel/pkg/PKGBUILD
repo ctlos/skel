@@ -1,0 +1,24 @@
+# Maintainer: Alex Creio <ctlos@protonmail.com>
+
+srcname=skel
+pkgname=i3-skel
+pkgdesc='Settings I3 wm'
+pkgver=1.0.0
+pkgrel=1
+arch=('any')
+url="https://github.com/ctlos/skel"
+license=('GPL')
+makedepends=('git')
+depends=('i3-gaps')
+source=("git+$url.git")
+sha256sums=('SKIP')
+install=README.install
+
+package() {
+  cd ${srcdir}/${srcname}/${pkgname}
+  mkdir -p "${pkgdir}/etc/skel"
+  mkdir -p "${pkgdir}/etc/skel-i3"
+
+  cp -rf etc/skel/. "$pkgdir/etc/skel-i3"
+  cp -rf etc/sddm.conf "${pkgdir}/etc/sddm-i3.conf"
+}

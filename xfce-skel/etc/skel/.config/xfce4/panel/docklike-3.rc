@@ -1,0 +1,4 @@
+[user]
+noWindowsListIfSingle=true
+indicatorColor=rgb(90,116,202)
+pinned=/usr/share/applications/gparted.desktop;/usr/share/applications/calamares.desktop;/usr/share/applications/leafpad.desktop;/usr/share/applications/thunar.desktop;/usr/share/applications/firefox.desktop;/usr/share/applications/xfce4-terminal.desktop;

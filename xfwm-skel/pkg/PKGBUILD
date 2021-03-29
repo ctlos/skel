@@ -1,0 +1,30 @@
+# Maintainer: Alex Creio <ctlos@protonmail.com>
+
+srcname=skel
+pkgname=xfwm-skel
+pkgdesc='Settings xfwm'
+pkgver=1.3.4
+pkgrel=1
+arch=('any')
+url="https://github.com/ctlos/skel"
+license=('GPL')
+makedepends=('git')
+depends=('xfwm4')
+source=("git+$url.git")
+sha256sums=('SKIP')
+install=README.install
+
+package() {
+  cd ${srcdir}/${srcname}/${pkgname}
+  mkdir -p "${pkgdir}/usr/bin"
+  mkdir -p "${pkgdir}/usr/bin-xfwm"
+  mkdir -p "${pkgdir}/etc/skel"
+  mkdir -p "${pkgdir}/etc/skel-xfwm"
+  mkdir -p "${pkgdir}/usr/share/xsessions"
+
+  cp -rf usr/bin/. "${pkgdir}/usr/bin-xfwm"
+  cp -f usr/share/xsessions/xfwm.desktop "${pkgdir}/usr/share/xsessions/xfwm.desktop"
+
+  cp -rf etc/skel/. "$pkgdir/etc/skel-xfwm"
+  cp -f etc/sddm.conf "${pkgdir}/etc/sddm-xfwm.conf"
+}

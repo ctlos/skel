@@ -1,0 +1,4 @@
+#!/bin/bash
+
+$HOME/.config/frankenwm/autostart &
+frankenwm
