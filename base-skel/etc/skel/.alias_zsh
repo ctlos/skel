@@ -18,7 +18,8 @@ alias updir="LC_ALL=C xdg-user-dirs-update --force"
 alias dmrun="dmenu_run -l 10 -p 'app>' -fn 'ClearSansMedium 9' -nb '#282c37' -nf '#f2f3f4' -sb '#5a74ca' -sf '#fff'"
 
 alias iip="curl --max-time 10 -w '\n' http://ident.me"
-alias tb="nc termbin.com 9999 | xsel -b -i"
+alias tb="nc termbin.com 9999"
+alias tbc="nc termbin.com 9999 | xsel -b -i"
 alias speed="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"
 
 doiso() {
