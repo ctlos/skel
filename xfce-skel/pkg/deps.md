@@ -20,7 +20,6 @@ xfce4-clipman-plugin
 xfce4-netload-plugin
 xfconf
 xfdesktop
-xfsprogs
 xfwm4
 thunar
 thunar-archive-plugin
