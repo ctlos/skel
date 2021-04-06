@@ -3,7 +3,7 @@
 srcname=skel
 pkgname=bspwm-skel
 pkgdesc='Settings Bspwm'
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/skel"
