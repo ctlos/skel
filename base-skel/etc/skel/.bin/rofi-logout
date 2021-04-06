@@ -13,7 +13,7 @@ then
     exec $HOME/.bin/multilock.sh -l blur
 elif [ "$DIALOG_RESULT" = "suspend lock" ];
 then
-    exec $HOME/.bin/multilock.sh -l blur
+    exec $HOME/.bin/multilock.sh -l blur &
     exec systemctl suspend
 elif [ "$DIALOG_RESULT" = "hibernate" ];
 then

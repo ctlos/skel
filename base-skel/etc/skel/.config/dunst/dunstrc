@@ -14,7 +14,7 @@
     separator_color = frame
     sort = yes
     idle_threshold = 120
-    font = Roboto Mono Medium 9
+    font = Clear Sans Medium 9
     line_height = 0
     markup = full
     format = "<span foreground='#b3bdcb'>%s %p</span>\n%b"

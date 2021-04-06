@@ -46,7 +46,7 @@ then
     exec bspc quit
 elif [ "$DIALOG_RESULT" = "Suspend Lock" ];
 then
-    exec $HOME/.bin/multilock.sh -s blur
+    exec $HOME/.bin/multilock.sh -s blur &
     exec systemctl suspend
 elif [ "$DIALOG_RESULT" = "Hibernate" ];
 then
