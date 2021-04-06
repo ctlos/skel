@@ -3,7 +3,7 @@
 srcname=skel
 pkgname=base-skel
 pkgdesc='Settings base'
-pkgver=1.0.0
+pkgver=1.1.0
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/skel"

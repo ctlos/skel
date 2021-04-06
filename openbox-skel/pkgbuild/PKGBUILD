@@ -3,13 +3,13 @@
 srcname=skel
 pkgname=openbox-skel
 pkgdesc='Settings Openbox'
-pkgver=1.0.0
+pkgver=1.1.0
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/skel"
 license=('GPL')
 makedepends=('git')
-depends=('openbox' 'obconf')
+depends=('openbox' 'obconf' 'base-skel')
 source=("git+$url.git")
 sha256sums=('SKIP')
 install=README.install
