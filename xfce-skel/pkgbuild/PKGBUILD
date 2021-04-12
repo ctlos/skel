@@ -3,22 +3,23 @@
 srcname=skel
 pkgname=xfce-skel
 pkgdesc='Settings xfce'
-pkgver=1.9.3
+pkgver=2.0.0
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/skel"
 license=('GPL')
 makedepends=('git')
 depends=('xfwm4')
+backup=(etc/sddm.conf)
 source=("git+$url.git")
 sha256sums=('SKIP')
 install=README.install
 
 package() {
   cd ${srcdir}/${srcname}/${pkgname}
-  mkdir -p "${pkgdir}/etc/skel"
-  mkdir -p "${pkgdir}/etc/skel-xfce"
+  install -dm755 "$pkgdir/etc/skel"
+  install -dm755 "$pkgdir/etc/skel-xfce"
 
   cp -rf etc/skel/. "$pkgdir/etc/skel-xfce"
-  cp -rf etc/sddm.conf "${pkgdir}/etc/sddm-xfce.conf"
+  install -m644 "$srcdir/sddm.conf" "$pkgdir/etc"
 }
