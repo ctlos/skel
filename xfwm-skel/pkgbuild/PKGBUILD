@@ -3,14 +3,13 @@
 srcname=skel
 pkgname=xfwm-skel
 pkgdesc='Settings xfwm'
-pkgver=1.4.0
+pkgver=1.5.0
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/skel"
 license=('GPL')
 makedepends=('git')
 depends=('xfwm4')
-backup=(etc/sddm.conf)
 source=("git+$url.git")
 sha256sums=('SKIP')
 install=README.install
@@ -27,5 +26,4 @@ package() {
   cp -f usr/share/xsessions/xfwm.desktop "${pkgdir}/usr/share/xsessions/xfwm.desktop"
 
   cp -rf etc/skel/. "$pkgdir/etc/skel-xfwm"
-  install -m644 etc/sddm.conf "$pkgdir/etc"
 }

@@ -3,14 +3,14 @@
 srcname=skel
 pkgname=bspwm-skel
 pkgdesc='Settings Bspwm'
-pkgver=1.2.1
+pkgver=1.3.0
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/skel"
 license=('GPL')
 makedepends=('git')
 depends=('bspwm')
-backup=(etc/sddm.conf)
+# backup=(etc/sddm.conf)
 source=("git+$url.git")
 sha256sums=('SKIP')
 install=README.install
@@ -24,5 +24,4 @@ package() {
 
   cp -rf usr/bin/. "${pkgdir}/usr/bin-bspwm"
   cp -rf etc/skel/. "$pkgdir/etc/skel-bspwm"
-  install -m644 etc/sddm.conf "$pkgdir/etc"
 }
