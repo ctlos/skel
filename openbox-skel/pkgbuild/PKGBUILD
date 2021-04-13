@@ -3,22 +3,23 @@
 srcname=skel
 pkgname=openbox-skel
 pkgdesc='Settings Openbox'
-pkgver=1.1.1
+pkgver=1.2.0
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/skel"
 license=('GPL')
 makedepends=('git')
 depends=('openbox' 'obconf' 'base-skel')
+backup=(etc/sddm.conf)
 source=("git+$url.git")
 sha256sums=('SKIP')
 install=README.install
 
 package() {
   cd ${srcdir}/${srcname}/${pkgname}
-  mkdir -p "${pkgdir}/etc/skel"
-  mkdir -p "${pkgdir}/etc/skel-ob"
+  install -dm755 "${pkgdir}/etc/skel"
+  install -dm755 "${pkgdir}/etc/skel-ob"
 
   cp -rf etc/skel/. "$pkgdir/etc/skel-ob"
-  cp -rf etc/sddm.conf "${pkgdir}/etc/sddm-ob.conf"
+  install -m644 etc/sddm.conf "$pkgdir/etc"
 }

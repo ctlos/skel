@@ -3,7 +3,7 @@
 srcname=skel
 pkgname=frankenwm-skel
 _pkgname=frankenwm
-pkgver=1.0.1
+pkgver=1.1.0
 pkgrel=1
 pkgdesc='Fast dynamic tiling window manager based on monsterwm-xcb'
 arch=('x86_64')
@@ -13,6 +13,7 @@ makedepends=('git')
 depends=('xcb-util-wm' 'xcb-util-keysyms')
 md5sums=("SKIP")
 install=README.install
+backup=(etc/sddm.conf)
 source=("git+$url.git")
 
 prepare() {
@@ -33,17 +34,17 @@ build() {
 
 package() {
   cd ${srcdir}/${srcname}/${pkgname}
-  mkdir -p "${pkgdir}/usr/bin"
-  mkdir -p "${pkgdir}/usr/bin-$_pkgname"
-  mkdir -p "${pkgdir}/etc/skel"
-  mkdir -p "${pkgdir}/etc/skel-$_pkgname"
-  mkdir -p "${pkgdir}/usr/share/xsessions"
+  install -dm755 "${pkgdir}/usr/bin"
+  install -dm755 "${pkgdir}/usr/bin-$_pkgname"
+  install -dm755 "${pkgdir}/etc/skel"
+  install -dm755 "${pkgdir}/etc/skel-$_pkgname"
+  install -dm755 "${pkgdir}/usr/share/xsessions"
 
   cp -rf usr/bin/. "${pkgdir}/usr/bin-$_pkgname"
   cp -rf etc/skel/. "$pkgdir/etc/skel-$_pkgname"
   cp -rf franken/. "$pkgdir/etc/skel-$_pkgname/.config/$_pkgname/src"
-  cp -rf etc/sddm.conf "${pkgdir}/etc/sddm-$_pkgname.conf"
   cp -rf usr/share/xsessions/$_pkgname.desktop "${pkgdir}/usr/share/xsessions/$_pkgname.desktop"
+  install -m644 etc/sddm.conf "$pkgdir/etc"
 
   cd ${srcdir}/${srcname}/${pkgname}/franken
   make PREFIX=/usr DESTDIR="${pkgdir}" install
