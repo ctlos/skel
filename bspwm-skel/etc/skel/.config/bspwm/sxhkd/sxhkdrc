@@ -4,7 +4,8 @@
 
 # show help on key bindings
 super + F1
-  $HOME/.config/bspwm/bspwmfloat urxvt -name Float -e ~/.config/bspwm/show_keys
+  sh -c "$HOME/.config/bspwm/show_keys"
+  #$HOME/.config/bspwm/bspwmfloat urxvt -name Float -e ~/.config/bspwm/show_keys
 
 # terminal emulator
 alt + Return
