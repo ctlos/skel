@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+# [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 
 # zmodload zsh/zprof
 
@@ -39,7 +39,6 @@ export FZF_COMPLETION_TRIGGER="~~"
 export TERM="xterm-256color"
 export EDITOR="$([[ -n $DISPLAY && $(command -v subl3) ]] && echo 'subl3' || echo 'nano')"
 export BROWSER="firefox"
-export SSH_KEY_PATH="~/.ssh/dsa_id"
 export XDG_CONFIG_HOME="$HOME/.config"
 export _JAVA_AWT_WM_NONREPARENTING=1
 
