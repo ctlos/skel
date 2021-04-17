@@ -2,15 +2,17 @@ _conf() {
   cp -rf /etc/skel-i3/. /etc/skel
   rm -rf /etc/skel-i3
 }
-_sed() {
+_sett() {
   if command -v sddm >/dev/null; then
     sed -i "s/Session=.*/Session=i3.desktop/" /etc/sddm.conf
   fi
+
+  echo "QT_QPA_PLATFORMTHEME=qt5ct" > /etc/environment
 }
 
 post_install() {
   _conf
-  _sed
+  _sett
 }
 
 post_upgrade() {

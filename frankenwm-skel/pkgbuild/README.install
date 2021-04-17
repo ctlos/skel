@@ -4,15 +4,17 @@ _conf() {
   cp -rf /usr/bin-frankenwm/. /usr/bin
   rm -rf /usr/bin-frankenwm
 }
-_sed() {
+_sett() {
   if command -v sddm >/dev/null; then
     sed -i "s/Session=.*/Session=frankenwm.desktop/" /etc/sddm.conf
   fi
+
+  echo "QT_QPA_PLATFORMTHEME=qt5ct" > /etc/environment
 }
 
 post_install() {
   _conf
-  _sed
+  _sett
 }
 
 post_upgrade() {

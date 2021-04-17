@@ -4,15 +4,17 @@ _conf() {
   cp -rf /usr/bin-xfwm/. /usr/bin
   rm -rf /usr/bin-xfwm
 }
-_sed() {
+_sett() {
   if command -v sddm >/dev/null; then
     sed -i "s/Session=.*/Session=xfwm.desktop/" /etc/sddm.conf
   fi
+
+  echo "QT_QPA_PLATFORMTHEME=qt5ct" > /etc/environment
 }
 
 post_install() {
   _conf
-  _sed
+  _sett
 }
 
 post_upgrade() {
