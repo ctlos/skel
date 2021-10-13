@@ -20,6 +20,7 @@ export SAVEHIST=10000
 export ZSH="/usr/share/oh-my-zsh"
 ZSH_THEME="af-magic"
 DISABLE_AUTO_UPDATE="true"
+ZSH_DISABLE_COMPFIX=true
 plugins=()
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 [[ ! -d $ZSH_CACHE_DIR ]] && mkdir -p $ZSH_CACHE_DIR
