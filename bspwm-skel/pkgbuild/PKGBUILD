@@ -17,11 +17,11 @@ install=README.install
 
 package() {
   cd ${srcdir}/${srcname}/${pkgname}
-  install -dm755 "${pkgdir}/usr/bin"
-  install -dm755 "${pkgdir}/usr/bin-bspwm"
+  install -dm755 "${pkgdir}/usr/local/bin"
+  install -dm755 "${pkgdir}/usr/local/bin-bspwm"
   install -dm755 "${pkgdir}/etc/skel"
   install -dm755 "${pkgdir}/etc/skel-bspwm"
 
-  cp -rf usr/bin/. "${pkgdir}/usr/bin-bspwm"
+  cp -rf usr/local/bin/. "${pkgdir}/usr/local/bin-bspwm"
   cp -rf etc/skel/. "$pkgdir/etc/skel-bspwm"
 }

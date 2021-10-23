@@ -1,8 +1,12 @@
 _conf() {
   cp -rf /etc/skel-bspwm/. /etc/skel
   rm -rf /etc/skel-bspwm
-  cp -rf /usr/bin-bspwm/. /usr/bin
-  rm -rf /usr/bin-bspwm
+
+  if [[ ! $(command -v xflock4) ]]; then
+    cp -rf /usr/local/bin-bspwm/xflock4 /usr/local/bin
+  fi
+  cp -rf /usr/local/bin-bspwm/{slock,rxvt} /usr/local/bin
+  rm -rf /usr/local/bin-bspwm
 }
 _sett() {
   if command -v sddm >/dev/null; then
