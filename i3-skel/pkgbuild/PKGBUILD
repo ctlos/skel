@@ -3,7 +3,7 @@
 srcname=skel
 pkgname=i3-skel
 pkgdesc='Settings I3 wm'
-pkgver=1.2.1
+pkgver=1.2.2
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/skel"
@@ -16,8 +16,11 @@ install=README.install
 
 package() {
   cd ${srcdir}/${srcname}/${pkgname}
+  install -dm755 "${pkgdir}/usr/local/bin"
+  install -dm755 "${pkgdir}/usr/local/bin-i3"
   install -dm755 "${pkgdir}/etc/skel"
   install -dm755 "${pkgdir}/etc/skel-i3"
 
+  cp -rf usr/local/bin/. "${pkgdir}/usr/local/bin-i3"
   cp -rf etc/skel/. "$pkgdir/etc/skel-i3"
 }

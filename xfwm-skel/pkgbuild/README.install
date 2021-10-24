@@ -1,8 +1,12 @@
 _conf() {
   cp -rf /etc/skel-xfwm/. /etc/skel
   rm -rf /etc/skel-xfwm
-  cp -rf /usr/bin-xfwm/. /usr/bin
-  rm -rf /usr/bin-xfwm
+
+  if [[ ! $(command -v xflock4) ]]; then
+    cp -rf /usr/local/bin-xfwm/xflock4 /usr/local/bin
+  fi
+  cp -rf /usr/local/bin-xfwm/{xfwm_run,slock,rxvt} /usr/local/bin
+  rm -rf /usr/local/bin-xfwm
 }
 _sett() {
   if command -v sddm >/dev/null; then

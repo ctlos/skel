@@ -12,4 +12,4 @@ hub release create "${assets[@]}" -m "Release $tag_name $cr_date" -t "$target_na
 
 hub release edit -m "Release $tag_name $cr_date
 
-https://ctlos.github.io/wiki/changelog/" "$tag_name"
+https://ctlos.github.io/changelog/" "$tag_name"

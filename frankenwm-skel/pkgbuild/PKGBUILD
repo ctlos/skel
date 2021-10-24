@@ -3,7 +3,7 @@
 srcname=skel
 pkgname=frankenwm-skel
 _pkgname=frankenwm
-pkgver=1.2.1
+pkgver=1.2.2
 pkgrel=1
 pkgdesc='Fast dynamic tiling window manager based on monsterwm-xcb'
 arch=('x86_64')
@@ -33,13 +33,13 @@ build() {
 
 package() {
   cd ${srcdir}/${srcname}/${pkgname}
-  install -dm755 "${pkgdir}/usr/bin"
-  install -dm755 "${pkgdir}/usr/bin-$_pkgname"
+  install -dm755 "${pkgdir}/usr/local/bin"
+  install -dm755 "${pkgdir}/usr/local/bin-$_pkgname"
   install -dm755 "${pkgdir}/etc/skel"
   install -dm755 "${pkgdir}/etc/skel-$_pkgname"
   install -dm755 "${pkgdir}/usr/share/xsessions"
 
-  cp -rf usr/bin/. "${pkgdir}/usr/bin-$_pkgname"
+  cp -rf usr/local/bin/. "${pkgdir}/usr/local/bin-$_pkgname"
   cp -rf etc/skel/. "$pkgdir/etc/skel-$_pkgname"
   cp -rf franken/. "$pkgdir/etc/skel-$_pkgname/.config/$_pkgname/src"
   cp -rf usr/share/xsessions/$_pkgname.desktop "${pkgdir}/usr/share/xsessions/$_pkgname.desktop"

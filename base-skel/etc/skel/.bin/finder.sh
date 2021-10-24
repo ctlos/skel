@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-#PUT THIS FILE IN ~/.local/share/rofi/finder.sh
-#USE: rofi -show find -modi find:~/.local/share/rofi/finder.sh
+#PUT THIS FILE IN ~/.bin/finder.sh
+#USE: rofi -show find -modi find:~/.bin/finder.sh
 if [ ! -z "$@" ]
 then
   QUERY=$@

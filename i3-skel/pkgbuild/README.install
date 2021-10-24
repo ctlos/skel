@@ -1,6 +1,12 @@
 _conf() {
   cp -rf /etc/skel-i3/. /etc/skel
   rm -rf /etc/skel-i3
+
+  if [[ ! $(command -v xflock4) ]]; then
+    cp -rf /usr/local/bin-i3/xflock4 /usr/local/bin
+  fi
+  #cp -rf /usr/local/bin-i3/{slock,rxvt} /usr/local/bin
+  rm -rf /usr/local/bin-i3
 }
 _sett() {
   if command -v sddm >/dev/null; then

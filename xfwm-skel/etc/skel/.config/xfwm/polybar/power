@@ -14,7 +14,7 @@ then
     exec $HOME/.bin/multilock.sh -l blur
 elif [ "$DIALOG_RESULT" = "Suspend Lock" ];
 then
-    exec $HOME/.bin/multilock.sh -s blur
+    exec $HOME/.bin/multilock.sh -l blur &
     exec systemctl suspend
 elif [ "$DIALOG_RESULT" = "Hibernate" ];
 then

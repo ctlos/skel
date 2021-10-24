@@ -32,7 +32,7 @@
     <property name="MenuImages" type="empty"/>
     <property name="ButtonImages" type="bool" value="false"/>
     <property name="MenuBarAccel" type="empty"/>
-    <property name="CursorThemeName" type="string" value="capitaine-cursors"/>
+    <property name="CursorThemeName" type="string" value="Qogir"/>
     <property name="CursorThemeSize" type="empty"/>
     <property name="DecorationLayout" type="string" value=":minimize,maximize,close"/>
   </property>

@@ -3,7 +3,7 @@
 srcname=skel
 pkgname=xfwm-skel
 pkgdesc='Settings xfwm'
-pkgver=1.5.1
+pkgver=1.6.1
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/skel"
@@ -16,13 +16,13 @@ install=README.install
 
 package() {
   cd ${srcdir}/${srcname}/${pkgname}
-  install -dm755 "${pkgdir}/usr/bin"
-  install -dm755 "${pkgdir}/usr/bin-xfwm"
+  install -dm755 "${pkgdir}/usr/local/bin"
+  install -dm755 "${pkgdir}/usr/local/bin-xfwm"
   install -dm755 "${pkgdir}/etc/skel"
   install -dm755 "${pkgdir}/etc/skel-xfwm"
   install -dm755 "${pkgdir}/usr/share/xsessions"
 
-  cp -rf usr/bin/. "${pkgdir}/usr/bin-xfwm"
+  cp -rf usr/local/bin/. "${pkgdir}/usr/local/bin-xfwm"
   cp -f usr/share/xsessions/xfwm.desktop "${pkgdir}/usr/share/xsessions/xfwm.desktop"
 
   cp -rf etc/skel/. "$pkgdir/etc/skel-xfwm"
