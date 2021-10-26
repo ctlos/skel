@@ -1,0 +1,246 @@
+// Global 
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+
+  "modules-left": [
+    "custom/launcher",
+    "cpu",
+    "memory",
+    "sway/window",
+    "sway/mode",
+  ],
+ 
+  "modules-center": [
+    //"custom/mpd",
+    "sway/workspaces",
+  ],
+
+  "modules-right": [
+    "disk#root",
+    //"custom/weather",
+    //"network",
+    //"idle_inhibitor",
+    "pulseaudio",
+    "battery",
+    //"custom/sys-battery",
+    //"backlight#icon",
+    //"backlight#value",
+    "sway/language",
+    //"custom/keyboard-layout",
+    "clock",
+    "tray",
+    "custom/power",
+  ],
+ 
+  // Modules
+  "idle_inhibitor": {
+    "format": "<span color=\"#798BC7\">{icon}</span>",
+    "format-icons":{
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  
+  "custom/mpd": {
+    "format": "<span color=\"#798BC7\">♪</span> {}",
+    "max-length": 15,
+    "interval": 10,
+    "exec": "mpc current",
+    "exec-if": "pgrep mpd",
+    "on-click": "mpc toggle",
+    "on-click-right": "sonata"
+  },
+
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "<span color=\"#798BC7\">{icon}</span> {capacity}%",
+    "format-charging": "<span color=\"#798BC7\"></span> {capacity}%",
+    "format-plugged": "<span color=\"#798BC7\"></span> {capacity}%",
+    // "format-good": "",
+    // "format-full": "",
+    "format-icons": ["", "", "", "", ""]
+  },
+  
+  "disk#root": {
+    "path": "/",
+    "interval": 30,
+    "format": "<span color=\"#798BC7\"></span> {free}"
+  },
+
+  "custom/sys-battery": {
+    "exec": "~/.config/waybar/scripts/sys-battery.sh",
+    "format": "{}",
+  },
+
+  "clock": {
+    "interval": 10,
+    "format-alt": "<span color=\"#798BC7\"></span> {:%e %b %Y}",
+    "format": "<span color=\"#798BC7\"></span> {:%H:%M}",
+    "tooltip-format": "{:%e %B %Y}"
+  },
+
+  "cpu": {
+    "interval": 5,
+    //"format": " {usage}% ({load})",
+    "format": "<span color=\"#798BC7\"></span> {usage}%",
+    "states": {
+    "warning": 70,
+    "critical": 90,
+    },
+    "on-click": "kitty --title htop-float -e 'htop'",
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": "<span color=\"#798BC7\"></span> {}%",
+    "on-click": "kitty --title 'htop-float' -e 'htop'",
+    "states": {
+      "warning": 70,
+      "critical": 90
+    }
+  },
+  
+  "sway/language": { 
+    "format": "<span color=\"#798BC7\"></span> {}", 
+    "max-length": 50,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/key-help.sh",
+  },
+ 
+  "custom/keyboard-layout": {
+    //"exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
+    "exec": "~/.config/waybar/scripts/key-layout.sh",
+    "interval": 1,
+    "format": "<span color=\"#798BC7\"></span> {}",
+    "signal": 1,
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/key-help.sh",
+  },
+ 
+  "network": {
+    "interval": 5,
+    "format-wifi": "<span color=\"#798BC7\"></span> {essid} ({signalStrength}%)", // Icon: wifi
+    "format-ethernet": "<span color=\"#798BC7\"></span> {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+    "format-disconnected": "<span color=\"#798BC7\">⚠</span> Disconnected",
+    "tooltip-format": "{ifname}: {ipaddr}",
+    "on-click": "xfce4-terminal -e 'nmtui'",
+  },
+  "network#vpn": {
+    "interface": "tun0",
+    "format": "<span color=\"#798BC7\"></span> {essid} ({signalStrength}%)",
+    "format-disconnected": "<span color=\"#798BC7\">⚠</span> Disconnected",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+  },
+ 
+  "sway/mode": {
+    "format": "{}",
+    "tooltip": false
+  },
+
+  "sway/window": {
+    "format": "{}",
+    "max-length": 45
+  },
+
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "disable-markup" : false,
+    "all-outputs": true,
+    "format": "  {icon}  ",
+    //"format":"{icon}",
+    "format-icons": {
+      "1": "",
+      //"2": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "focused": "f",
+      //"default": ""
+    }
+  },
+
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "<span color=\"#798BC7\">{icon}</span> {volume}%",
+    "format-bluetooth": "<span color=\"#798BC7\">{icon}</span> {volume}%  {format_source}",
+    "format-bluetooth-muted": " {icon}  {format_source}",
+    "format-muted": "婢 {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " {format_source}",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "וֹ",
+      "headset": "  ",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [""]
+    },
+    "on-click": "pavucontrol",
+    "on-scroll-up": "pamixer -ui 5",
+    "on-scroll-down": "pamixer -ud 5",
+  },
+ 
+  "custom/weather": {
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    "format": "{}",
+    "interval": 5,
+    "tooltip-format": "{tooltip}",
+    "return-type": "json"
+  },
+
+  "tray": {
+    "icon-size": 14,
+    "spacing":5,
+  },
+
+  "backlight#icon": {
+    "format": "<span color=\"#798BC7\">{icon}</span>",
+    "format-icons": [""],
+    "on-scroll-down": "brightnessctl -c backlight set 1%-",
+    "on-scroll-up": "brightnessctl -c backlight set +1%"
+  },
+
+  "backlight#value" :{
+    "format": "{percent}%",
+    "on-scroll-down": "brightnessctl -c backlight set 1%-",
+    "on-scroll-up": "brightnessctl -c backlight set +1%"
+  },
+
+  "custom/firefox": {
+    "format": " ",
+    "on-click": "exec firefox",
+    "tooltip": false
+  },
+ 
+  "custom/terminal": {
+    "format": " ",
+    "on-click": "exec kitty",
+    "tooltip": false
+  },
+
+  "custom/files": {
+    "format": " ",
+    "on-click": "exec thunar",
+    "tooltip": false
+  },
+
+  "custom/launcher": {
+    "format":"",
+    "on-click": "exec wofi -c ~/.config/wofi/config -I",
+    "tooltip": false,
+  },
+ 
+  "custom/power": {
+    "format":"⏻",
+    "on-click": "exec ~/.config/waybar/scripts/power.sh",
+    "tooltip": false,
+  },
+}
+

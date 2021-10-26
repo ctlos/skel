@@ -1,0 +1,33 @@
+# set gtk
+exec_always ~/.config/sway/scripts/gsettings.sh
+
+#seat seat0 xcursor_theme "Qogir"
+
+gaps inner 2
+gaps outer 0
+
+default_border pixel 1
+font pango:ClearSansMedium 10
+smart_borders on
+exec swaybg -m fill -i /usr/share/wall/ctld.png
+
+exec swayidle -w\
+    timeout 1070 'swaylock -f -C ~/.config/swaylock/config'\
+    timeout 770 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock -C ~/.config/swaylock/config'
+
+for_window [shell="xdg_shell"] title_format "%title (%app_id)"
+for_window [shell="x_wayland"] title_format "%class - %title"
+
+# class                 border  bground text    indicator child_border
+client.focused          #5A74CA #5A74CA #f2f3f4 #5A74CA   #5A74CA
+client.focused_inactive #373b41 #373b41 #f2f3f4 #373b41   #373b41
+client.unfocused        #161720 #161720 #BFBFBF #161720   #161720
+client.urgent           #373b41 #d85656 #f2f3f4 #d85656   #d85656
+client.placeholder      #161720 #161720 #f2f3f4 #161720   #161720
+client.background       #f2f3f4
+
+bar {
+   swaybar_command waybar
+}

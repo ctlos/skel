@@ -1,0 +1,48 @@
+@define-color highlight #5A74CA;
+@define-color base1  #161720;
+@define-color text #e8eaef;
+
+* {
+  /*font-family: ClearSansMedium;*/
+}
+
+window {
+  border: 1px solid @highlight;
+}
+
+#input {
+  margin-bottom: 15px;
+  padding:3px;
+  border-radius: 5px;
+  border:none;
+  color: @text;
+}
+
+#inner-box {
+  background-color: @base1;
+}
+
+#outer-box {
+  margin: 5px;
+  padding:10px;
+  background-color: @base1;
+}
+
+#scroll {
+}
+
+#text {
+  padding: 8px;
+  color: @text;
+}
+
+#entry:nth-child(even){
+  background-color: @base1;
+}
+
+#entry:selected {
+  background-color: @highlight;
+}
+
+#text:selected {
+}

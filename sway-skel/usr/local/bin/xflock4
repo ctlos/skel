@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+
+/usr/local/bin/multilock.sh -l blur

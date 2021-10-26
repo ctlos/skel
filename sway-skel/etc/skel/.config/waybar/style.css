@@ -1,0 +1,175 @@
+@define-color highlight #798BC7;
+@define-color base1 #161720;
+@define-color bg-transparent rgba(43, 48, 59, 0.5);
+@keyframes blink-warning {
+  70% {
+    color: white;
+  }
+  to {
+    color: white;
+    background-color: orange;
+  }
+}
+@keyframes blink-critical {
+  70% {
+    color: white;
+  }
+
+  to {
+    color: white;
+    background-color: red;
+  }
+}
+ /* Reset all styles */
+ * {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* The whole bar */
+#waybar {
+  background: transparent;
+  color: #9baec8;
+  background-color: @base1;
+  font-family: Ubuntu, "Font Awesome 5 Free";
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/**/
+#window {
+  font-size: 12px;
+}
+#language {
+  font-size: 14px;
+}
+
+/* Each module */
+#disk,
+#battery,
+#clock,
+#backlight,
+#cpu,
+#language,
+#custom-keyboard-layout,
+#memory,
+#window,
+#mode,
+#custom-weather,
+#network,
+#pulseaudio,
+#temperature,
+#tray,
+#idle_inhibitor,
+#custom-mpd
+#custom-sys-battery{
+  padding:0.5rem 0.6rem;
+  margin: 1px 0px;
+}
+/* Module styles */
+#disk {
+}
+#battery {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#battery.warning {
+  color: orange;
+}
+#battery.critical {
+  color: red;
+}
+#battery.warning.discharging {
+  animation-name: blink-warning;
+  animation-duration: 3s;
+}
+#battery.critical.discharging {
+  animation-name: blink-critical;
+  animation-duration: 2s;
+}
+#cpu{
+}
+#cpu.warning {
+  color: orange;
+}
+#cpu.critical {
+  color: red;
+}
+#memory {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#memory.warning {
+  color: orange;
+}
+#memory.critical {
+  color: red;
+  animation-name: blink-critical;
+  animation-duration: 2s;
+  padding-left:5px;
+  padding-right:5px;
+}
+#mode {
+  background: @highlight;
+  color:white;
+}
+#network.disconnected {
+  color: orange;
+}
+#pulseaudio{
+} 
+#pulseaudio.muted {
+  color: @highlight;
+}
+#temperature.critical {
+  color: red;
+}
+#workspaces {
+  background: @bg-transparent;
+}
+#workspaces button {
+  font-size: 14px;
+  color: @highlight;
+  border-bottom: 2px solid transparent;
+  margin-bottom: 0px;
+  padding-left:5px;
+  padding-right:5px;
+}
+/*#workspaces button:nth-child(2) {
+  font-size: 20px;
+  padding-left:3px;
+  padding-right:3px;
+}*/
+#workspaces button.focused {
+  background: @bg-transparent;
+  border-bottom: 2px solid  @highlight;
+}
+#workspaces button.urgent {
+  border-color: #d85656;
+  color: #d85656;
+}
+#custom-power{
+  color: @highlight;
+  background: @bg-transparent;
+  font-size:18px;
+  padding-left:10px;
+  padding-right:10px;
+  margin-left:5px;
+}   
+#custom-launcher{
+  color: @highlight;
+  background: @bg-transparent;
+  font-size:18px;
+  padding-left:10px;
+  padding-right:10px;
+  margin-right:5px;
+}
+#backlight.icon{
+ padding-right:1px;
+ font-size: 13px;	
+}

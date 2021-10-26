@@ -1,0 +1,27 @@
+font=ClearSansMedium 11
+background-color=#161720
+text-color=#f2f3f4
+width=315
+height=200
+padding=10
+margin=10
+progress-color=over #eceff480
+icon-path=/usr/share/icons/Papirus-Dark/
+max-icon-size=32
+layer=overlay
+
+border-size=1
+border-radius=0
+border-color=#798BC7
+
+default-timeout=5000
+
+[urgency=low]
+background-color=#161720
+text-color=#f2f3f4
+default-timeout=3000
+#icon-path=~/.icons/linebit/alarm.png
+
+[urgency=critical]
+text-color=#ffd5cd
+border-color=#ffd5cd

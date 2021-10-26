@@ -1,0 +1,3 @@
+include $HOME/.config/sway/config.d/*
+
+# xwayland disable

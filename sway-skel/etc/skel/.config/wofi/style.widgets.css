@@ -1,0 +1,45 @@
+@define-color highlight #5A74CA;
+@define-color base1  #161720;
+@define-color text #e8eaef;
+
+* {
+  /*font-family: ClearSansMedium;*/
+}
+
+#window {
+  background-color: @base1;
+  border: 1px solid @highlight;
+
+}
+
+#inner-box {
+  background-color: @base1;
+}
+
+#outer-box {
+  padding:10px;
+  margin-top: -22px;
+}
+
+#scroll {
+}
+
+#text {
+  padding: 5px;
+  color: @text;
+}
+
+#entry:nth-child(even){
+  background-color: @base1;
+}
+
+#entry {
+  background-color: @base1;
+}
+
+#entry:selected {
+  background-color: @highlight;
+}
+
+#text:selected {
+}

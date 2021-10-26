@@ -1,0 +1,24 @@
+# indicator
+# no-unlock-indicator
+# daemonize
+indicator-caps-lock
+# datestr=%A
+image=/usr/share/wall/wl.png
+scaling=fill
+font=ClearSansMedium
+font-size=20
+
+# Ring
+indicator-radius=115
+# line-uses-ring
+line-color=#3b4252
+text-color=#f2f3f4
+inside-color=#16172098
+inside-ver-color=#798bc7
+line-ver-color=#798bc7
+ring-ver-color=#798bc798
+ring-color=#4c566a
+key-hl-color=#798bc7
+separator-color=#4c566a
+layout-text-color=#eceff4
+line-wrong-color=#d8565698

@@ -1,0 +1,26 @@
+_conf() {
+  cp -rf /etc/skel-sway/. /etc/skel
+  rm -rf /etc/skel-sway
+
+  if [[ ! $(command -v xflock4) ]]; then
+    cp -rf /usr/local/bin-sway/xflock4 /usr/local/bin
+  fi
+  #cp -rf /usr/local/bin-sway/{slock,rxvt} /usr/local/bin
+  rm -rf /usr/local/bin-sway
+}
+_sett() {
+  if command -v sddm >/dev/null; then
+    sed -i "s/Session=.*/Session=sway.desktop/" /etc/sddm.conf
+  fi
+
+  echo "QT_QPA_PLATFORMTHEME=qt5ct" > /etc/environment
+}
+
+post_install() {
+  _conf
+  _sett
+}
+
+post_upgrade() {
+  _conf
+}
