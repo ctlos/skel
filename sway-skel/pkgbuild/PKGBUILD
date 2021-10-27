@@ -3,13 +3,13 @@
 srcname=skel
 pkgname=sway-skel
 pkgdesc='Settings sway wm'
-pkgver=1.0.0
+pkgver=1.1.0
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/skel"
 license=('GPL')
 makedepends=('git')
-depends=('i3-gaps')
+depends=('sway')
 source=("git+$url.git")
 sha256sums=('SKIP')
 install=README.install

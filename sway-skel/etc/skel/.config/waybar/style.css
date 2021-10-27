@@ -34,7 +34,7 @@
   background: transparent;
   color: #9baec8;
   background-color: @base1;
-  font-family: Ubuntu, "Font Awesome 5 Free";
+  font-family: Ubuntu, "Font Awesome 5 Free", "Font Awesome 5 Brands";
   font-size: 13px;
   font-weight: bold;
 }
@@ -140,11 +140,6 @@
   padding-left:5px;
   padding-right:5px;
 }
-/*#workspaces button:nth-child(2) {
-  font-size: 20px;
-  padding-left:3px;
-  padding-right:3px;
-}*/
 #workspaces button.focused {
   background: @bg-transparent;
   border-bottom: 2px solid  @highlight;
@@ -164,12 +159,12 @@
 #custom-launcher{
   color: @highlight;
   background: @bg-transparent;
-  font-size:18px;
+  /*font-size:14px;*/
   padding-left:10px;
   padding-right:10px;
   margin-right:5px;
 }
 #backlight.icon{
  padding-right:1px;
- font-size: 13px;	
+ font-size: 13px;
 }
