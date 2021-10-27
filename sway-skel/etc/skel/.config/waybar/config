@@ -74,7 +74,7 @@
     "exec": "~/.config/waybar/scripts/uparch.sh",
     "exec-if": "exit 0",
     "on-click": "kitty --title 'term-float' -e ~/.config/waybar/scripts/uparch.sh d_up",
-    "on-click-right": "kitty --title 'term-float' -e pacui"
+    "on-click-right": "kitty --title 'term-float' -e ~/.bin/pacui"
   },
   
   "disk#root": {
