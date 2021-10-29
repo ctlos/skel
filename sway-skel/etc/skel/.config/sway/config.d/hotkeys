@@ -15,7 +15,6 @@ set $windows ~/.config/wofi/windows.py
 set $power ~/.config/waybar/scripts/power.sh
 set $lock ~/.config/sway/scripts/lock.sh
 set $screenshot ~/.config/sway/scripts/screenshot.sh
-set $alttab ~/.config/sway/scripts/alttab.sh
 
 floating_modifier $mod normal
 
@@ -26,8 +25,7 @@ bindsym --to-code $mod+Shift+b exec pkill -SIGUSR1 '^waybar$'
 bindsym --to-code $mod+Return exec $term
 bindsym --to-code $mod+Shift+Return exec $term-float
 bindsym --to-code $mod+d exec $menu
-bindsym --to-code $mod+p exec $windows
-bindsym --to-code $mod1+Tab exec $alttab
+bindsym --to-code $mod1+Tab exec $windows
 bindsym --to-code $mod+delete exec $lock
 bindsym --to-code $mod+$mod1+delete exec $power
 
@@ -93,15 +91,15 @@ bindsym --to-code $mod+Shift+minus move scratchpad
 bindsym --to-code $mod+minus scratchpad show
 
 mode "resize" {
-    bindsym --to-code $left resize grow width 10px
-    bindsym --to-code $right resize shrink width 10px
-    bindsym --to-code $up resize shrink height 10px
-    bindsym --to-code $down resize grow height 10px
+    bindsym --to-code $left resize shrink width 10px
+    bindsym --to-code $right resize grow width 10px
+    bindsym --to-code $up resize grow height 10px
+    bindsym --to-code $down resize shrink height 10px
 
-    bindsym Left resize grow width 10px
-    bindsym Right resize shrink width 10px
-    bindsym Up resize shrink height 10px
-    bindsym Down resize grow height 10px
+    bindsym Left resize shrink width 10px
+    bindsym Right resize grow width 10px
+    bindsym Up resize grow height 10px
+    bindsym Down resize shrink height 10px
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
