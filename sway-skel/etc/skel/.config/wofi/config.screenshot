@@ -1,6 +1,6 @@
 hide_search=true
 hide_scroll=true
-width=100
+width=250
 show=dmenu
 lines=5
 location=center

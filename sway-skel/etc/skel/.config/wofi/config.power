@@ -1,8 +1,10 @@
 hide_search=true
 hide_scroll=true
 show=dmenu
+insensitive=true
+cache_file=/dev/null
 width=100
-lines=4
+lines=5
 location=top_right
 x=-105
 y=10

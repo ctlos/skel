@@ -15,6 +15,7 @@ set $windows ~/.config/wofi/windows.py
 set $power ~/.config/waybar/scripts/power.sh
 set $lock ~/.config/sway/scripts/lock.sh
 set $screenshot ~/.config/sway/scripts/screenshot.sh
+set $alttab ~/.config/sway/scripts/alttab.sh
 
 floating_modifier $mod normal
 
@@ -26,6 +27,7 @@ bindsym --to-code $mod+Return exec $term
 bindsym --to-code $mod+Shift+Return exec $term-float
 bindsym --to-code $mod+d exec $menu
 bindsym --to-code $mod+p exec $windows
+bindsym --to-code $mod1+Tab exec $alttab
 bindsym --to-code $mod+delete exec $lock
 bindsym --to-code $mod+$mod1+delete exec $power
 
