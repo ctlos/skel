@@ -1,5 +1,4 @@
 configuration {
-  theme: "default.rasi";
   show-icons: true;
   icon-theme: "Qogir";
   font: "ClearSansMedium 10";
@@ -13,3 +12,4 @@ configuration {
   sidebar-mode: true;
   separator-style: "none";
 }
+@theme "default.rasi"
