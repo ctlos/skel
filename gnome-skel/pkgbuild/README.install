@@ -4,7 +4,7 @@ _conf() {
 }
 _sett() {
   if command -v sddm >/dev/null; then
-    sed -i "s/Session=.*/Session=gnome.desktop/" /etc/sddm.conf
+    sed -i "s/Session=.*/Session=gnome-xorg.desktop/" /etc/sddm.conf
   fi
 
   echo "QT_QPA_PLATFORMTHEME=qt5ct" > /etc/environment
