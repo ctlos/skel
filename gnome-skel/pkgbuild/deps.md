@@ -15,8 +15,8 @@ nautilus-image-converter
 nautilus-share
 python-nautilus
 gedit
-galculator
 file-roller
+gnome-calculator
 gnome-nettool
 gnome-usage
 gnome-multi-writer
