@@ -4,6 +4,8 @@ chrome-gnome-shell
 firefox-extension-gnome-shell-integration
 gnome-shell-extension-just-perfection-desktop-git
 gnome-control-center
+gnome-themes-extra
+gnome-menus
 tilix
 gnome-tweaks
 nautilus
