@@ -2,6 +2,7 @@ gnome-shell
 gnome-shell-extensions
 chrome-gnome-shell
 firefox-extension-gnome-shell-integration
+gnome-shell-extension-just-perfection-desktop-git
 gnome-control-center
 tilix
 gnome-tweaks
