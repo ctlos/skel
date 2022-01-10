@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Dconf Loader
+Comment=Loads GNOME settings
+Icon=variety
+Exec=sh -c "~/.config/autostart-scripts/dconf.sh && rm -rf ~/.config/autostart/dconf-load.desktop"
+Terminal=false
+Type=Application

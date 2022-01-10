@@ -1,0 +1,24 @@
+# Maintainer: Alex Creio <ctlos@protonmail.com>
+
+srcname=skel
+pkgname=gnome-skel
+pkgdesc='Settings GNOME'
+pkgver=1.0.0
+pkgrel=1
+arch=('any')
+url="https://github.com/ctlos/skel"
+license=('GPL')
+makedepends=('git')
+depends=('gnome-shell')
+# backup=(etc/sddm.conf)
+source=("git+$url.git")
+sha256sums=('SKIP')
+install=README.install
+
+package() {
+  cd ${srcdir}/${srcname}/${pkgname}
+  install -dm755 "${pkgdir}/etc/skel"
+  install -dm755 "${pkgdir}/etc/skel-gnome"
+
+  cp -rf etc/skel/. "$pkgdir/etc/skel-gnome"
+}
