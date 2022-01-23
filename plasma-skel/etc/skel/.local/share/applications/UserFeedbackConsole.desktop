@@ -1,0 +1,22 @@
+[Desktop Entry]
+Categories=Development;
+Comment[ru_RU]=Analytics and administration tool for UserFeedback servers.
+Comment=Analytics and administration tool for UserFeedback servers.
+Exec=UserFeedbackConsole
+GenericName[ru_RU]=UserFeedback Management Console
+GenericName=UserFeedback Management Console
+Icon=search
+MimeType=
+Name[ru_RU]=UserFeedback Console
+Name=UserFeedback Console
+NoDisplay=true
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-StartupNotify=true
+X-KDE-SubstituteUID=false
+X-KDE-Username=

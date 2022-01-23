@@ -1,0 +1,8 @@
+[Keyboard]
+KeyRepeat=repeat
+NumLock=2
+RepeatDelay=600
+RepeatRate=25
+
+[Mouse]
+cursorTheme=Qogir

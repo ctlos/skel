@@ -1,0 +1,24 @@
+# Maintainer: Alex Creio <ctlos@protonmail.com>
+
+srcname=skel
+pkgname=plasma-skel
+pkgdesc='Settings kde/plasma'
+pkgver=1.0.0
+pkgrel=1
+arch=('any')
+url="https://github.com/ctlos/skel"
+license=('GPL')
+makedepends=('git')
+depends=('plasma-desktop' 'libdbusmenu-glib' 'libdbusmenu-gtk3' 'libdbusmenu-gtk2' 'libdbusmenu-qt5')
+# backup=(etc/sddm.conf)
+source=("git+$url.git")
+sha256sums=('SKIP')
+install=README.install
+
+package() {
+  cd ${srcdir}/${srcname}/${pkgname}
+  install -dm755 "${pkgdir}/etc/skel"
+  install -dm755 "${pkgdir}/etc/skel-plasma"
+
+  cp -rf etc/skel/. "$pkgdir/etc/skel-plasma"
+}
