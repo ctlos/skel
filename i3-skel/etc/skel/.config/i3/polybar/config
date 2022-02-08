@@ -59,8 +59,8 @@ module-margin-right = 0
 
 font-0 = "ClearSans:style=Bold:pixelsize=9:antialias=false;1"
 # Cat unicode: echo -e "\uF31A"
-font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=8;1"
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
+font-1 = "Font Awesome 6 Free:style=Regular:pixelsize=8;1"
+font-2 = "Font Awesome 6 Free:style=Solid:pixelsize=8;1"
 font-3 = "Hack Nerd Font:antialias=false:pixelsize=9;2"
 # font-4 = "Weather Icons:style=Regular:pixelsize=9;2"
 

@@ -59,9 +59,9 @@ module-margin-right = 0
 
 font-0 = ClearSansMedium:size=9:antialias=false;1
 # Cat unicode: echo -e "\uF31A"
-font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=8;1"
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=8;1"
-font-3 = "Font Awesome 5 Brands:pixelsize=8;1"
+font-1 = "Font Awesome 6 Free:style=Regular:pixelsize=8;1"
+font-2 = "Font Awesome 6 Free:style=Solid:pixelsize=8;1"
+font-3 = "Font Awesome 6 Brands:pixelsize=8;1"
 font-4 = "unifont:fontformat=truetype:size=8:antialias=false;1"
 
 
