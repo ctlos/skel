@@ -40,7 +40,7 @@ offset-x = 0
 offset-y = 0
 fixed-center = true
 bottom = false
-locale = ru_RU.UTF-8
+#locale = ru_RU.UTF-8
 
 background = ${colors.background}
 foreground = ${colors.foreground}
