@@ -7,7 +7,8 @@ _sett() {
     sed -i "s/Session=.*/Session=xfce.desktop/" /etc/sddm.conf
   fi
 
-  echo "QT_QPA_PLATFORMTHEME=qt5ct" > /etc/environment
+  #echo "QT_QPA_PLATFORMTHEME=qt5ct" > /etc/environment
+  echo "QT_STYLE_OVERRIDE=kvantum" > /etc/environment
 }
 
 post_install() {
