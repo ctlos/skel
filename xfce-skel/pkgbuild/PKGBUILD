@@ -3,13 +3,13 @@
 srcname=skel
 pkgname=xfce-skel
 pkgdesc='Settings xfce'
-pkgver=2.2.0
+pkgver=2.2.1
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/skel"
 license=('GPL')
 makedepends=('git')
-depends=('xfwm4')
+depends=('xfwm4', 'ctlos-keyring')
 source=("git+$url.git")
 sha256sums=('SKIP')
 install=README.install

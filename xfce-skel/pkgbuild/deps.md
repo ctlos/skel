@@ -1,3 +1,4 @@
+ctlos-keyring
 polkit-gnome
 alacarte
 catfish
