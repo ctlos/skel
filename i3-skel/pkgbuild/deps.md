@@ -29,5 +29,4 @@ udisks2
 udiskie
 skippy-xd-git
 multilockscreen-git
-polybar-git
-jsoncpp
+polybar

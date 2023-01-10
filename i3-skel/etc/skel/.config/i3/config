@@ -25,35 +25,35 @@ set $mode_gaps_inner Inner Gaps: +|-|0 (local), mod1 + +|-|0 (global)
 bindsym $mod+mod1+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
-        bindsym o      mode "$mode_gaps_outer"
-        bindsym i      mode "$mode_gaps_inner"
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym o      mode "$mode_gaps_outer"
+    bindsym i      mode "$mode_gaps_inner"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
+    bindsym plus  gaps inner current plus 5
+    bindsym minus gaps inner current minus 5
+    bindsym 0     gaps inner current set 0
 
-        bindsym mod1+plus  gaps inner all plus 5
-        bindsym mod1+minus gaps inner all minus 5
-        bindsym mod1+0     gaps inner all set 0
+    bindsym mod1+plus  gaps inner all plus 5
+    bindsym mod1+minus gaps inner all minus 5
+    bindsym mod1+0     gaps inner all set 0
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 mode "$mode_gaps_outer" {
-        bindsym plus  gaps outer current plus 5
-        bindsym minus gaps outer current minus 5
-        bindsym 0     gaps outer current set 0
+    bindsym plus  gaps outer current plus 5
+    bindsym minus gaps outer current minus 5
+    bindsym 0     gaps outer current set 0
 
-        bindsym mod1+plus  gaps outer all plus 5
-        bindsym mod1+minus gaps outer all minus 5
-        bindsym mod1+0     gaps outer all set 0
+    bindsym mod1+plus  gaps outer all plus 5
+    bindsym mod1+minus gaps outer all minus 5
+    bindsym mod1+0     gaps outer all set 0
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 
@@ -165,19 +165,19 @@ bindsym $mod+mod1+Delete exec ~/.bin/i3-logout
 # bindsym $mod+mod1+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 mode "resize" {
-        bindsym j resize shrink width 3 px or 3 ppt
-        bindsym k resize grow height 3 px or 3 ppt
-        bindsym l resize shrink height 3 px or 3 ppt
-        bindsym semicolon resize grow width 3 px or 3 ppt
+    bindsym j resize shrink width 3 px or 3 ppt
+    bindsym k resize grow height 3 px or 3 ppt
+    bindsym l resize shrink height 3 px or 3 ppt
+    bindsym semicolon resize grow width 3 px or 3 ppt
 
-        bindsym Left resize shrink width 3 px or 3 ppt
-        bindsym Down resize grow height 3 px or 3 ppt
-        bindsym Up resize shrink height 3 px or 3 ppt
-        bindsym Right resize grow width 3 px or 3 ppt
+    bindsym Left resize shrink width 3 px or 3 ppt
+    bindsym Down resize grow height 3 px or 3 ppt
+    bindsym Up resize shrink height 3 px or 3 ppt
+    bindsym Right resize grow width 3 px or 3 ppt
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
 
