@@ -57,6 +57,9 @@
     </property>
     <property name="plugin-5" type="string" value="clock">
       <property name="digital-format" type="string" value="%T"/>
+      <property name="digital-time-format" type="string" value="%R"/>
+      <property name="digital-layout" type="uint" value="3"/>
+      <property name="digital-time-font" type="string" value="Clear Sans Medium, Medium 10"/>
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="names-visible" type="array">
