@@ -3,7 +3,7 @@
 srcname=skel
 pkgname=gnome-skel
 pkgdesc='Settings GNOME'
-pkgver=1.0.5
+pkgver=1.0.6
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/skel"

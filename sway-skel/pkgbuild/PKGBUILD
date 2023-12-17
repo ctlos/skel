@@ -3,7 +3,7 @@
 srcname=skel
 pkgname=sway-skel
 pkgdesc='Settings sway wm'
-pkgver=1.3.3
+pkgver=1.3.4
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/skel"
