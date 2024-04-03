@@ -3,7 +3,7 @@
 srcname=skel
 pkgname=frankenwm-skel
 _pkgname=frankenwm
-pkgver=1.2.5
+pkgver=1.3.1
 pkgrel=1
 pkgdesc='Fast dynamic tiling window manager based on monsterwm-xcb'
 arch=('x86_64')

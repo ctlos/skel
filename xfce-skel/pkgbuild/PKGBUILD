@@ -3,7 +3,7 @@
 srcname=skel
 pkgname=xfce-skel
 pkgdesc='Settings xfce'
-pkgver=2.2.14
+pkgver=2.3.1
 pkgrel=1
 arch=('any')
 url="https://github.com/ctlos/skel"
