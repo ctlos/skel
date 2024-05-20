@@ -209,9 +209,9 @@ alias torc="$BROWSER --proxy-server='socks://127.0.0.1:9050' &"
 alias psi="$BROWSER --proxy-server='socks://127.0.0.1:1081' &"
 
 # full screen flags -fs
-alias yt="straw-viewer"
+alias yt="pipe-viewer"
 ytv () {
-  straw-viewer "$1"
+  pipe-viewer "$1"
 }
 
 # youtube-dl --ignore-errors -o '~/Видео/youtube/%(playlist)s/%(title)s.%(ext)s' https://www.youtube.com/playlist?list=PL-UzghgfytJQV-JCEtyuttutudMk7
